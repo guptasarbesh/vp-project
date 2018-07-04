@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" style="cursor:pointer" routerLink="/">Eyekart</a>
+            <a class="navbar-brand" style="cursor:pointer" routerLink="./Home">Eyekart</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -10,17 +10,17 @@
           <ul class="navbar-nav">
             <div class="col-lg-2">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Men<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" routerLink="./Men" style="cursor:pointer">Men<span class="sr-only">(current)</span></a>
                   </li>
             </div>
            <div class="col-lg-2">
               <li class="nav-item">
-                  <a class="nav-link" href="#">Women</a>
+                  <a class="nav-link" routerLink="./Women" style="cursor:pointer">Women</a>
                 </li>
            </div>
            <div class="col-lg-2">
               <li class="nav-item">
-                  <a class="nav-link" href="#">Kids</a>
+                  <a class="nav-link" routerLink="./Kids" style="cursor:pointer">Kids</a>
                 </li>
            </div>
             <div class="col-lg-10 col-sm-10">
@@ -36,10 +36,10 @@
           </ul>
           <ul class="nav navbar-nav navbar-right" style="position: absolute;right: 0;padding:25px;">
               
-                  <li><a class="nav-link" routerLink="/Signup" style="cursor:pointer  routerLink=signup ">Signup <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+                  <li><a class="nav-link" routerLink="./Signup" style="cursor:pointer">Signup <i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
               
-              <li><a class="nav-link" routerLink="/Signin" style="cursor:pointer"> Signin <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
-              <li><a class="nav-link" style="cursor:pointer"> Logout <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+              <li><a class="nav-link" routerLink="./Signin" style="cursor:pointer"> Signin <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+              
               <li>
                 <a class="nav-link" style="cursor:pointer">
                   Cart
@@ -55,24 +55,4 @@
     </div>
   </nav>
 
-  <div class="container">
-      <div class="row" style="padding-bottom: 20px; padding-top: 20px">
-        <div class="col-sm-4 demo">
-          <a style="text-decoration: none;cursor:pointer" class="effect-underline " (click)="setCategory('lenses')">
-            <h4 class="none">Lenses</h4>
-          </a>
-        </div>
-        <div class="col-sm-4 demo">
-          <a (click)="setCategory('sunglasses')" style="text-decoration: none; cursor:pointer" class="effect-underline">
-            <h4 class="none">Sunglasses</h4>
-          </a>
-        </div>
-        <div class="col-sm-4 demo">
-          <a (click)="setCategory('eyeglasses')" style="text-decoration: none; cursor:pointer" class="effect-underline">
-            <h4 class="none">Eyeglasses</h4>
-          </a>
-        </div>
-      </div>
-    
-    
-    
+  

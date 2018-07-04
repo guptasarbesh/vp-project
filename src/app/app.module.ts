@@ -6,6 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
 import { Routes,RouterModule } from "@angular/router";
 import 'hammerjs';
 
@@ -16,9 +17,19 @@ import { MatListModule } from '@angular/material/list';
 import { HeaderComponent } from './header/header.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
+import { FooterComponent } from './footer/footer.component';
+import { MenComponent } from './men/men.component';
+import { HomeComponent } from './home/home.component';
+import { WomenComponent } from './women/women.component';
+import { KidsComponent } from './kids/kids.component';
+import { SubHeaderComponent } from './sub-header/sub-header.component';
 
 const appRoutes: Routes=[
   { path: '',component:SignupComponent },
+{ path: 'Home',component:HomeComponent },
+{ path: 'Men',component:MenComponent },
+{ path: 'Women',component:WomenComponent },
+{ path: 'Kids',component:KidsComponent },
 { path: 'Signin',component:SigninComponent },
 { path: 'Signup',component:SignupComponent }
 
@@ -32,6 +43,12 @@ const appRoutes: Routes=[
     HeaderComponent,
     SigninComponent,
     SignupComponent,
+    FooterComponent,
+    MenComponent,
+    HomeComponent,
+    WomenComponent,
+    KidsComponent,
+    SubHeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +59,7 @@ const appRoutes: Routes=[
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
     // AppRoutingModule
  
