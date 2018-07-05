@@ -23,3 +23,23 @@
   
 
   }
+
+  .container
+  {
+      margin:10px auto;
+      padding:0px 0px 0px 0px;
+  }
+
+  .parallax {
+    /* The image used */
+    background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=background-blur-clean-531880.jpg&fm=jpg');
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

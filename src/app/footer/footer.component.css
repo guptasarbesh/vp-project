@@ -15,20 +15,56 @@ $background-pale: #D1C4E9;
 
 */
 
-.container
-{
-    width: 100%;
-}
-.footer
-{
- padding: 0px auto;
-    margin: 0px auto;
-    background-color:lightgrey;
+a.effect-underline:after {
+	content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 0em;
+  width: 96%;
+  border-bottom: 1px solid;
+  margin-top: 0px;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition:opacity 0.35s, -webkit-transform 0.35s;
+	transition:opacity 0.35s, transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+	-webkit-transform: scale(0,1);
+    transform: scale(0,1);
+    text-decoration-color: #0f0f0f;
+    
 }
 
-.btn-facebook {color:#fff!important; background-color:#3fff!important;}
-.btn-google-plus{color:#fff!important;background-color:#dd4b39!important;}
+a.effect-underline:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.footer
+{
+    background-color:lightslategray;
+    margin: 0px auto;
+    padding:20px 0px 20px 0px;
+    
+}
+
+.address
+{
+    font-size:80%;
+    margin: 0px;
+color:#0f0f0f;
+}
+
+
+.btn-facebook {color:#fff!important; background-color:rgb(16, 29, 29)!important;}
+.btn-google-plus{color:#fff!important;background-color:#471e19!important;}
 .btn-youtube{color:#fff!important;background-color:#ff4b39!important;}
-.btn-linkedin{color:#fff!important;background-color:#007bb6!important;}
+.btn-linkedin{color:#fff!important;background-color:#2f3538!important;}
 .btn-twitter{color:#fff!important;background-color:#55acee!important;}
-.btn-mail{color:#fff!important;background-color:#512DA8!important;}
+.btn-mail{color:#fff!important;background-color:rgb(32, 30, 37)!important;}
+
+
+ul .list-unstyled
+{
+    text-decoration-color: #0f0f0f;
+}
