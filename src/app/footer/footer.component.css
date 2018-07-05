@@ -23,10 +23,10 @@ $background-pale: #D1C4E9;
 {
  padding: 0px auto;
     margin: 0px auto;
-    background-color:#9575CD;
+    background-color:lightgrey;
 }
 
-.btn-facebook {color:#fff!important; background-color:#3b5998!important;}
+.btn-facebook {color:#fff!important; background-color:#3fff!important;}
 .btn-google-plus{color:#fff!important;background-color:#dd4b39!important;}
 .btn-youtube{color:#fff!important;background-color:#ff4b39!important;}
 .btn-linkedin{color:#fff!important;background-color:#007bb6!important;}

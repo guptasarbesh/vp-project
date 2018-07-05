@@ -1,0 +1,25 @@
+.carousel-inner .carousel-item {
+    height: 500px;
+  }
+  
+  .item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 300px;
+  }
+
+  .carousel-caption
+  {
+    font-size: 4em;
+    font-family: 'Courier New', Courier, monospace;
+    /* line-height: 2em; */
+    height: 5em;
+    /* display: table-cell; */
+    /* vertical-align: -webkit-baseline-middle ; */
+    /* background-color: #ededed; */
+  margin: auto;
+  padding:auto;
+  
+
+  }

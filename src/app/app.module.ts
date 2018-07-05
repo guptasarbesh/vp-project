@@ -23,15 +23,22 @@ import { HomeComponent } from './home/home.component';
 import { WomenComponent } from './women/women.component';
 import { KidsComponent } from './kids/kids.component';
 import { SubHeaderComponent } from './sub-header/sub-header.component';
+import { LensesComponent } from './lenses/lenses.component';
+import { SunglassComponent } from './sunglass/sunglass.component';
+import { EyeglassComponent } from './eyeglass/eyeglass.component';
+
 
 const appRoutes: Routes=[
-  { path: '',component:SignupComponent },
+  { path: '',component:HomeComponent },
 { path: 'Home',component:HomeComponent },
 { path: 'Men',component:MenComponent },
 { path: 'Women',component:WomenComponent },
 { path: 'Kids',component:KidsComponent },
 { path: 'Signin',component:SigninComponent },
-{ path: 'Signup',component:SignupComponent }
+{ path: 'Signup',component:SignupComponent },
+{ path: 'Lenses',component:LensesComponent },
+{ path: 'Sunglass',component:SunglassComponent },
+{ path: 'Eyeglass',component: EyeglassComponent }
 
 ];
 
@@ -49,6 +56,10 @@ const appRoutes: Routes=[
     WomenComponent,
     KidsComponent,
     SubHeaderComponent,
+    LensesComponent,
+    SunglassComponent,
+    EyeglassComponent,
+    
   ],
   imports: [
     BrowserModule,
