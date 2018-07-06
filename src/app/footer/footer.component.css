@@ -1,4 +1,4 @@
-/* $lt-gray: #ddd;
+ /* $lt-gray: #ddd;
 $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-pale: #D1C4E9;
@@ -6,46 +6,18 @@ $background-pale: #D1C4E9;
 @mixin zero-margin($pad-up-down, $pad-left-right) {
     margin: 0px auto;
     padding: $pad-up-down $pad-left-right;
-}
+} */
 
-.footer{
-    background-color: $background-pale;
-    @include zero-margin(20px, 0px);
-}
+/* .footer{ */
 
-*/
+    /* background-color: $background-pale; */
+    /* @include zero-margin(20px, 0px); */
+/* } */
 
-a.effect-underline:after {
-	content: '';
-  position: absolute;
-  left: 0;
-  display: inline-block;
-  height: 0em;
-  width: 96%;
-  border-bottom: 1px solid;
-  margin-top: 0px;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition:opacity 0.35s, -webkit-transform 0.35s;
-	transition:opacity 0.35s, transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
-	-webkit-transform: scale(0,1);
-    transform: scale(0,1);
-    text-decoration-color: #0f0f0f;
-    
-}
-
-a.effect-underline:hover:after {
-  opacity: 1;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
 
 .footer
 {
     background-color:lightslategray;
-    margin: 0px auto;
-    padding:20px 0px 20px 0px;
-    
 }
 
 .address
