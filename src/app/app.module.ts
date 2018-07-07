@@ -12,7 +12,6 @@ import 'hammerjs';
 
 
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
 import { MatListModule } from '@angular/material/list';
 import { HeaderComponent } from './header/header.component';
 import { SigninComponent } from './signin/signin.component';
@@ -23,7 +22,6 @@ import { HomeComponent } from './home/home.component';
 import { WomenComponent } from './women/women.component';
 import { KidsComponent } from './kids/kids.component';
 import { SubHeaderComponent } from './sub-header/sub-header.component';
-import { LensesComponent } from './lenses/lenses.component';
 import { SunglassComponent } from './sunglass/sunglass.component';
 import { EyeglassComponent } from './eyeglass/eyeglass.component';
 
@@ -36,8 +34,8 @@ const appRoutes: Routes=[
 { path: 'Kids',component:KidsComponent },
 { path: 'Signin',component:SigninComponent },
 { path: 'Signup',component:SignupComponent },
-{ path: 'Lenses',component:LensesComponent },
-{ path: 'Sunglass',component:SunglassComponent },
+
+{ path: 'Men/Sunglass',component:SunglassComponent },
 { path: 'Eyeglass',component: EyeglassComponent }
 
 ];
@@ -46,7 +44,7 @@ const appRoutes: Routes=[
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
+   
     HeaderComponent,
     SigninComponent,
     SignupComponent,
@@ -56,7 +54,7 @@ const appRoutes: Routes=[
     WomenComponent,
     KidsComponent,
     SubHeaderComponent,
-    LensesComponent,
+
     SunglassComponent,
     EyeglassComponent,
     
