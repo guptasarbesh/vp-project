@@ -38,7 +38,7 @@ const appRoutes: Routes=[
 
 { path: 'Men/Sunglass',component:SunglassComponent },
 { path: 'Men/Sunglass/Product',component:ProductComponent },
-{ path: 'Eyeglass',component: EyeglassComponent }
+{ path: 'Men/Eyeglass',component: EyeglassComponent }
 
 ];
 
