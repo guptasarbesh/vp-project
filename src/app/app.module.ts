@@ -26,7 +26,7 @@ import { SunglassComponent } from './sunglass/sunglass.component';
 import { EyeglassComponent } from './eyeglass/eyeglass.component';
 import { ProductComponent } from './product/product.component';
 
-
+import { GlassesService } from './services/glasses.service';
 const appRoutes: Routes=[
   { path: '',component:HomeComponent },
 { path: 'Home',component:HomeComponent },
@@ -77,7 +77,7 @@ const appRoutes: Routes=[
  
 
   ],
-  providers: [],
+  providers: [GlassesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
