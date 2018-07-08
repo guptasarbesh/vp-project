@@ -24,6 +24,7 @@ import { KidsComponent } from './kids/kids.component';
 import { SubHeaderComponent } from './sub-header/sub-header.component';
 import { SunglassComponent } from './sunglass/sunglass.component';
 import { EyeglassComponent } from './eyeglass/eyeglass.component';
+import { ProductComponent } from './product/product.component';
 
 
 const appRoutes: Routes=[
@@ -36,6 +37,7 @@ const appRoutes: Routes=[
 { path: 'Signup',component:SignupComponent },
 
 { path: 'Men/Sunglass',component:SunglassComponent },
+{ path: 'Men/Sunglass/Product',component:ProductComponent },
 { path: 'Eyeglass',component: EyeglassComponent }
 
 ];
@@ -57,6 +59,7 @@ const appRoutes: Routes=[
 
     SunglassComponent,
     EyeglassComponent,
+    ProductComponent,
     
   ],
   imports: [

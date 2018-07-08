@@ -36,14 +36,14 @@
       <div class="row wow fadeIn">
 
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4">
+        <div class="col-lg-3 col-md-6 mb-4" *ngFor="let item of glassList; let i = index;">
 
           <!--Card-->
           <div class="card">
 
             <!--Card image-->
             <div class="view overlay">
-              <img src="\assets\images\100\01.jpg" class="card-img-top" alt="">
+              <img [src]="getImage(item.image)" class="card-img-top" alt="">
               <a>
                 <div class="mask rgba-white-slight"></div>
               </a>
@@ -53,19 +53,19 @@
             <!--Card content-->
             <div class="card-body text-center">
               <!--Category & Title-->
-              <a href="#" class="grey-text">
-                <h5>VINCENT CHASSE POLARISED</h5>
+              <a routerLink="Product" class="grey-text">
+                <h5>{{item.name}}</h5>
               </a>
               <h5>
                 <strong>
-                  <a href="#" class="dark-grey-text">Product Id:11101
+                  <a routerLink="Product" class="dark-grey-text">Product Id:{{item.id}}
                     <span class="badge badge-pill danger-color">NEW</span>
                   </a>
                 </strong>
               </h5>
 
               <h4 class="font-weight-bold blue-text">
-                <strong>120$</strong>
+                <strong>{{item.price}}</strong>
               </h4>
 
             </div>
@@ -78,298 +78,14 @@
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4">
-
-          <!--Card-->
-          <div class="card">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img src="\assets\images\02\01.jpg" class="card-img-top" alt="">
-              <a>
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-            <!--Card image-->
-
-            <!--Card content-->
-            <div class="card-body text-center">
-              <!--Category & Title-->
-              <a href="" class="grey-text">
-                <h5>VINCENT CHASE SUNSETTERS</h5>
-              </a>
-              <h5>
-                <strong>
-                  <a href="" class="dark-grey-text">Product Id:11102</a>
-                </strong>
-              </h5>
-
-              <h4 class="font-weight-bold blue-text">
-                <strong>139$</strong>
-              </h4>
-
-            </div>
-            <!--Card content-->
-
-          </div>
-          <!--Card-->
-
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4">
-
-          <!--Card-->
-          <div class="card">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img src="\assets\images\03\01.jpg" class="card-img-top" alt="">
-              <a>
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-            <!--Card image-->
-
-            <!--Card content-->
-            <div class="card-body text-center">
-              <!--Category & Title-->
-              <a href="" class="grey-text">
-                <h5>MASK</h5>
-              </a>
-              <h5>
-                <strong>
-                  <a href="#" class="dark-grey-text">Product Id:11103
-                    <span class="badge badge-pill primary-color">bestseller</span>
-                  </a>
-                </strong>
-              </h5>
-
-              <h4 class="font-weight-bold blue-text">
-                <strong>99$</strong>
-              </h4>
-
-            </div>
-            <!--Card content-->
-
-          </div>
-          <!--Card-->
-
-        </div>
-        <!--Grid column-->
-
-        <!--Fourth column-->
-        <div class="col-lg-3 col-md-6 mb-4">
-
-          <!--Card-->
-          <div class="card">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img src="\assets\images\04\01.jpg" class="card-img-top" alt="">
-              <a>
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-            <!--Card image-->
-
-            <!--Card content-->
-            <div class="card-body text-center">
-              <!--Category & Title-->
-              <a href="#" class="grey-text">
-                <h5>JOHN JACOBS</h5>
-              </a>
-              <h5>
-                <strong>
-                  <a href="#" class="dark-grey-text">Product Id:11104</a>
-                </strong>
-              </h5>
-
-              <h4 class="font-weight-bold blue-text">
-                <strong>219$</strong>
-              </h4>
-
-            </div>
-            <!--Card content-->
-
-          </div>
-          <!--Card-->
-
-        </div>
+       
         <!--Fourth column-->
 
       </div>
       <!--Grid row-->
 
       <!--Grid row-->
-      <div class="row wow fadeIn">
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4">
-
-          <!--Card-->
-          <div class="card">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img src="\assets\images\05\01.jpg" class="card-img-top" alt="">
-              <a>
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-            <!--Card image-->
-
-            <!--Card content-->
-            <div class="card-body text-center">
-              <!--Category & Title-->
-              <a href="#" class="grey-text">
-                <h5>VINCENT CHASE POLARIZED</h5>
-              </a>
-              <h5>
-                <strong>
-                  <a href="#" class="dark-grey-text">Product Id:11105
-                    <span class="badge badge-pill danger-color">NEW</span>
-                  </a>
-                </strong>
-              </h5>
-
-              <h4 class="font-weight-bold blue-text">
-                <strong>120$</strong>
-              </h4>
-
-            </div>
-            <!--Card content-->
-
-          </div>
-          <!--Card-->
-
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4">
-
-          <!--Card-->
-          <div class="card">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img src="\assets\images\06\02.jpg" class="card-img-top" alt="">
-              <a>
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-            <!--Card image-->
-
-            <!--Card content-->
-            <div class="card-body text-center">
-              <!--Category & Title-->
-              <a href="#" class="grey-text">
-                <h5>VOGUE</h5>
-              </a>
-              <h5>
-                <strong>
-                  <a href="#" class="dark-grey-text">Product Id:11106</a>
-                </strong>
-              </h5>
-
-              <h4 class="font-weight-bold blue-text">
-                <strong>139$</strong>
-              </h4>
-
-            </div>
-            <!--Card content-->
-
-          </div>
-          <!--Card-->
-
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4">
-
-          <!--Card-->
-          <div class="card">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img src="\assets\images\07\01.jpg" class="card-img-top" alt="">
-              <a>
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-            <!--Card image-->
-
-            <!--Card content-->
-            <div class="card-body text-center">
-              <!--Category & Title-->
-              <a href="#" class="grey-text">
-                <h5>VOGUE VO5222S</h5>
-              </a>
-              <h5>
-                <strong>
-                  <a href="#" class="dark-grey-text">Product Id:11107
-                    <span class="badge badge-pill primary-color">bestseller</span>
-                  </a>
-                </strong>
-              </h5>
-
-              <h4 class="font-weight-bold blue-text">
-                <strong>99$</strong>
-              </h4>
-
-            </div>
-            <!--Card content-->
-
-          </div>
-          <!--Card-->
-
-        </div>
-        <!--Grid column-->
-
-        <!--Fourth column-->
-        <div class="col-lg-3 col-md-6 mb-4">
-
-          <!--Card-->
-          <div class="card">
-
-            <!--Card image-->
-            <div class="view overlay">
-              <img src="\assets\images\08\01.jpg" class="card-img-top" alt="">
-              <a>
-                <div class="mask rgba-white-slight"></div>
-              </a>
-            </div>
-            <!--Card image-->
-
-            <!--Card content-->
-            <div class="card-body text-center">
-              <!--Category & Title-->
-              <a href="#" class="grey-text">
-                <h5>RAY-BAN</h5>
-              </a>
-              <h5>
-                <strong>
-                  <a href="#" class="dark-grey-text">Product Id:111108</a>
-                </strong>
-              </h5>
-
-              <h4 class="font-weight-bold blue-text">
-                <strong>219$</strong>
-              </h4>
-
-            </div>
-            <!--Card content-->
-
-          </div>
-          <!--Card-->
-
-        </div>
-        <!--Fourth column-->
-
-      </div>
+      
       <!--Grid row-->
 
     </section>

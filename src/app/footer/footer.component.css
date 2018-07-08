@@ -17,14 +17,15 @@ $background-pale: #D1C4E9;
 
 .footer
 {
-    background-color:lightslategray;
+    background-color:#343a40!important;
+    color: white;
 }
 
 .address
 {
     font-size:80%;
     margin: 0px;
-color:#0f0f0f;
+color:rgb(238, 233, 247)!important;
 }
 
 
@@ -38,5 +39,5 @@ color:#0f0f0f;
 
 ul .list-unstyled
 {
-    text-decoration-color: #0f0f0f;
+    text-decoration-color: #fff!important;
 }

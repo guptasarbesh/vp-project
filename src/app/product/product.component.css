@@ -1,0 +1,36 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+main .container {
+    margin-left: 100px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+@media (max-width: 740px) {
+    html,
+    body,
+    header,
+    .carousel {
+      height: 100vh;
+    }
+  }
+
+  @media (min-width: 800px) and (max-width: 850px) {
+    html,
+    body,
+    header,
+    .carousel {
+      height: 100vh;
+    }
+  }
+
+
+
+
