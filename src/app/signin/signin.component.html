@@ -1,13 +1,15 @@
+<p>{{user|json}}</p>
 <div class="login-card"><img src="\assets\images\02\01.jpg" class="profile-img-card">
   <p class="profile-name-card"> </p>
-  <form class="form-signin"><span class="reauth-email"> </span>
-      <input class="form-control" type="email" required="" placeholder="Email address" autofocus="" id="inputEmail">
-      <input class="form-control" type="password" required="" placeholder="Password" id="inputPassword">
+  <form class="form-signin" novalidate #loginForm="ngForm" (ngSubmit)="onSubmit()"><span class="reauth-email" > </span>
+    
+      <input class="form-control" type="email" required="" placeholder="Email address" autofocus="" id="inputEmail" [(ngModel)]="user.email" name="email" #email="ngModel" required>
+      <input class="form-control" type="password" required="" placeholder="Password" id="inputPassword" [(ngModel)]="user.password" name="password"  #password="ngModel" required>
       <div class="checkbox">
           <div class="checkbox">
               <label>
-                  <input type="checkbox">Remember me</label>
+                  <input type="checkbox" [(ngModel)]="user.remember" name="check">Remember me</label>
           </div>
       </div>
-      <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit">Sign in</button>
+      <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit" [disabled]="loginForm.form.invalid">Sign in</button>
   </form><a href="#" class="forgot-password">Forgot your password?</a></div>

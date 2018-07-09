@@ -65,6 +65,6 @@ export class SunglassComponent implements OnInit {
   }
 
   getImage(image){
-    return '\\assets\\images\\100\\' + image;
+    return '\\assets\\images\\101\\' + image;
   }
 }

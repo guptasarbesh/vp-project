@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
+
+  user:{remember:false,email:String,password:String};
   constructor() { }
 
   ngOnInit() {
+    this.user={
+      remember:false,
+      email:'',
+      password:''
+    }
+  }
+
+  onSubmit()
+  {
+    console.log("User:",this.user);
   }
 
 }
