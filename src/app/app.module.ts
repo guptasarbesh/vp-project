@@ -27,6 +27,12 @@ import { EyeglassComponent } from './eyeglass/eyeglass.component';
 import { ProductComponent } from './product/product.component';
 
 import { GlassesService } from './services/glasses.service';
+import { RegisterComponent } from './register/register.component';
+
+import { ValidateService } from './services/validate.service';
+
+import { FlashMessagesModule } from 'angular2-flash-messages';
+
 const appRoutes: Routes=[
   { path: '',component:HomeComponent },
 { path: 'Home',component:HomeComponent },
@@ -34,8 +40,9 @@ const appRoutes: Routes=[
 { path: 'Women',component:WomenComponent },
 { path: 'Kids',component:KidsComponent },
 { path: 'Signin',component:SigninComponent },
-{ path: 'Signup',component:SignupComponent },
 
+
+{ path: 'Register',component:RegisterComponent },
 { path: 'Men/Sunglass',component:SunglassComponent },
 { path: 'Men/Sunglass/Product',component:ProductComponent },
 { path: 'Men/Eyeglass',component: EyeglassComponent }
@@ -60,6 +67,8 @@ const appRoutes: Routes=[
     SunglassComponent,
     EyeglassComponent,
     ProductComponent,
+    RegisterComponent,
+  
     
   ],
   imports: [
@@ -72,12 +81,13 @@ const appRoutes: Routes=[
     MatCardModule,
     MatButtonModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FlashMessagesModule
     // AppRoutingModule
  
 
   ],
-  providers: [GlassesService],
+  providers: [ValidateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

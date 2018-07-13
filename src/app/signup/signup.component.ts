@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlassesService } from '../services/glasses.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _glassService: GlassesService) { }
 
   ngOnInit() {
   }
 
+  onSubmit(){
+    // this._glassService.signupUser({}).subscribe(data=>{
+    //   console.log(data);
+    // }, err=> console.log(err))
+
+    console.log(123);
+  }
 }
