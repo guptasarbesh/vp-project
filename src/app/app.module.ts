@@ -28,6 +28,7 @@ import { ProductComponent } from './product/product.component';
 
 import { GlassesService } from './services/glasses.service';
 import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
@@ -43,6 +44,7 @@ const appRoutes: Routes=[
 { path: 'Women',component:WomenComponent },
 { path: 'Kids',component:KidsComponent },
 { path: 'Signin',component:SigninComponent },
+{ path: 'Dashboard',component:DashboardComponent },
 
 
 { path: 'Register',component:RegisterComponent },
@@ -70,6 +72,7 @@ const appRoutes: Routes=[
     EyeglassComponent,
     ProductComponent,
     RegisterComponent,
+    DashboardComponent
   
     
   ],
