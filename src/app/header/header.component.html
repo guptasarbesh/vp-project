@@ -23,7 +23,7 @@
                   <a class="nav-link" [routerLinkActive]="['active']"  routerLink="./Kids" style="cursor:pointer">Kids</a>
                 </li>
            </div>
-            <div class="col-lg-10 col-sm-10">
+            <div class="col-lg-6 col-sm-6 ">
                 <form class="navbar-form" role="search">
                   <div class="input-group" style=" width: 100%;">
                     <input type="text" class="form-control" placeholder="Search" name="q">
@@ -35,6 +35,14 @@
               </div>
           </ul>
           <ul class="nav navbar-nav navbar-right" style="position: absolute;right: 0;padding:25px;">
+              <li ><a class="nav-link" [routerLinkActive]="['active']" routerLink="./Dashboard" style="cursor:pointer">
+                Dashboard
+                <i class="fa fa-user-plus" aria-hidden="true"></i></a>
+              </li>
+               <li ><a class="nav-link" [routerLinkActive]="['active']" routerLink="./Profile" style="cursor:pointer">
+                    Profile
+                    <i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                  </li>
               
                   <li><a class="nav-link" [routerLinkActive]="['active']" routerLink="./Register" style="cursor:pointer">
                     Signup 
@@ -47,7 +55,7 @@
                   <i class="fa fa-sign-in" aria-hidden="true"></i>
                 </a>
                 </li>
-                <li>
+                <li >
                   <a class="nav-link" (click)="onLogoutClick()" href="#" style="cursor:pointer"> 
                     Logout 
                     <i class="fa fa-sign-out" aria-hidden="true"></i>

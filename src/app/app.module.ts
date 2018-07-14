@@ -35,6 +35,7 @@ import { AuthService } from './services/auth.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { HttpClientModule } from '@angular/common/http';
 import {HttpModule } from '@angular/http';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const appRoutes: Routes=[
@@ -45,7 +46,7 @@ const appRoutes: Routes=[
 { path: 'Kids',component:KidsComponent },
 { path: 'Signin',component:SigninComponent },
 { path: 'Dashboard',component:DashboardComponent },
-
+{ path: 'Profile',component:ProfileComponent },
 
 { path: 'Register',component:RegisterComponent },
 { path: 'Men/Sunglass',component:SunglassComponent },
@@ -72,7 +73,8 @@ const appRoutes: Routes=[
     EyeglassComponent,
     ProductComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    ProfileComponent
   
     
   ],

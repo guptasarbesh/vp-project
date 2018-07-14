@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { HttpModule } from '@angular/http';
 import { map } from'rxjs/operators';
+
+import { tokenNotExpired } from 'angular2-jwt';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -27,6 +30,28 @@ export class AuthService {
       .pipe(map(res => res.json()));
 
   }
+
+  getProfile()
+  {
+    const headers = new Headers();
+    this.loadToken();
+    headers.append('Authorization',this.authToken);
+    headers.append('Content-Type', 'application/json');
+    return this.http.get('http://localhost:3000/users/profile', {headers: headers})
+      .pipe(map(res => res.json()));
+  }
+
+  loadToken()
+  {
+    const token=localStorage.getItem('id_token');
+    this.authToken=token;
+
+  }
+
+
+  // loggedIn() {
+  //   return tokenNotExpired('id_token');
+  // }
 
   storeUserData(token,user)
   {
