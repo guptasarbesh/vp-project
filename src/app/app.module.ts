@@ -15,7 +15,7 @@ import { AppComponent } from './app.component';
 import { MatListModule } from '@angular/material/list';
 import { HeaderComponent } from './header/header.component';
 import { SigninComponent } from './signin/signin.component';
-import { SignupComponent } from './signup/signup.component';
+
 import { FooterComponent } from './footer/footer.component';
 import { MenComponent } from './men/men.component';
 import { HomeComponent } from './home/home.component';
@@ -32,6 +32,9 @@ import { RegisterComponent } from './register/register.component';
 import { ValidateService } from './services/validate.service';
 import { AuthService } from './services/auth.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
+import { HttpClientModule } from '@angular/common/http';
+import {HttpModule } from '@angular/http';
+
 
 const appRoutes: Routes=[
   { path: '',component:HomeComponent },
@@ -56,7 +59,6 @@ const appRoutes: Routes=[
    
     HeaderComponent,
     SigninComponent,
-    SignupComponent,
     FooterComponent,
     MenComponent,
     HomeComponent,
@@ -82,7 +84,10 @@ const appRoutes: Routes=[
     MatButtonModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    FlashMessagesModule
+    FlashMessagesModule.forRoot(),
+    HttpClientModule,
+    HttpModule
+
     // AppRoutingModule
  
 
