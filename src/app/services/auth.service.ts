@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
-import { HttpModule } from '@angular/http';
-import { map } from'rxjs/operators';
-
+import { map } from 'rxjs/operators';
 import { tokenNotExpired } from 'angular2-jwt';
 
 @Injectable({
@@ -40,7 +38,16 @@ export class AuthService {
     return this.http.get('http://localhost:3000/users/profile', {headers: headers})
       .pipe(map(res => res.json()));
   }
-
+  addInterseted(id,product){
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.put('http://localhost:3000/users/addCart/'+id+'/'+product,this.user,{headers:headers}).
+    pipe(map(res => res.json()));
+  }
+  haveUser(email) {
+    return this.http.get('http://localhost:3000/users/check/' + email)
+      .pipe(map(res => res.json()));
+  }
   loadToken()
   {
     const token=localStorage.getItem('id_token');
@@ -66,5 +73,7 @@ export class AuthService {
     this.user=null;
     localStorage.clear();
   }
+
+
   
 }

@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
-import {Observable, throwError} from 'rxjs';
 import {catchError, map} from 'rxjs/operators';
-import { Http } from '../../../node_modules/@angular/http';
+import { Http } from '@angular/http';
 
 @Injectable({
   providedIn: 'root'
@@ -31,6 +29,11 @@ export class GlassesService {
   getProducts()
   {
     return this.http.get("http://localhost:3000/products/allProduct").pipe(map(res=>res.json()));
+  }
+  getItem(id)
+  {
+      return this.http.get("http://localhost:3000/products/getItem/"+id).pipe(map(res=>res.json()));
+    
   }
 
 }
