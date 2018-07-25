@@ -36,7 +36,8 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 import { HttpClientModule } from '@angular/common/http';
 import {HttpModule } from '@angular/http';
 import { ProfileComponent } from './profile/profile.component';
-
+import {AuthGuard} from './guards/auth.guards';
+import { CartComponent } from './cart/cart.component';
 
 const appRoutes: Routes=[
   { path: '',component:HomeComponent },
@@ -44,13 +45,14 @@ const appRoutes: Routes=[
 { path: 'Men',component:MenComponent },
 { path: 'Women',component:WomenComponent },
 { path: 'Kids',component:KidsComponent },
+{ path: 'cart',component:CartComponent },
 { path: 'Signin',component:SigninComponent },
-{ path: 'Dashboard',component:DashboardComponent },
-{ path: 'Profile',component:ProfileComponent },
+{ path: 'Dashboard',component:DashboardComponent, canActivate:[AuthGuard] },
+{ path: 'Profile',component:ProfileComponent,canActivate:[AuthGuard] },
 
 { path: 'Register',component:RegisterComponent },
 { path: 'Men/Sunglass',component:SunglassComponent },
-{ path: 'Men/Sunglass/Product',component:ProductComponent },
+{ path: 'Men/Sunglass/Product/:id',component:ProductComponent },
 { path: 'Men/Eyeglass',component: EyeglassComponent }
 
 ];
@@ -74,7 +76,8 @@ const appRoutes: Routes=[
     ProductComponent,
     RegisterComponent,
     DashboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    CartComponent
   
     
   ],
@@ -97,7 +100,7 @@ const appRoutes: Routes=[
  
 
   ],
-  providers: [ValidateService,AuthService],
+  providers: [ValidateService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

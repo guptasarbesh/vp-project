@@ -1,5 +1,5 @@
 <main class="mt-5 pt-4">
-  <div class="container dark-grey-text mt-5">
+  <div class="container dark-grey-text mt-5 " *ngIf="product">
 
     <!--Grid row-->
     <div class="row wow fadeIn">
@@ -7,7 +7,7 @@
       <!--Grid column-->
       <div class="col-md-6 mb-4">
 
-        <img src="\assets\images\100\01.jpg" class="img-fluid" alt="">
+        <img [src]="getImage(product.image)" class="img-fluid" alt="">
 
       </div>
       <!--Grid column-->
@@ -32,22 +32,26 @@
 
           <p class="lead">
             <span class="mr-1">
-              <del>$200</del>
+              <del>{{product.price}}</del>
             </span>
-            <span>$100</span>
+            <span>{{product.price}}</span>
           </p>
 
-          <p class="lead font-weight-bold">Description</p>
+          <p class="lead font-weight-bold">Product Description</p>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolor suscipit libero eos atque quia ipsa sint voluptatibus!
-            Beatae sit assumenda asperiores iure at maxime atque repellendus maiores quia sapiente.</p>
+          <p>Flaunt the classic retro wayfarer look with the bold and stylish VC 5030 Sunsetters Black Blue C2 Wayfarer Sunglasses. It adds a great edge to your entire ensemble and offers complete eye protection from the harmful UV rays.
+
+            .</p>
 
           <form class="d-flex justify-content-left">
             <!-- Default input -->
             <input type="number" value="1" aria-label="Search" class="form-control" style="width: 100px">
-            <button class="btn btn-primary btn-md my-0 p" type="submit">Add to cart
+            <!-- <button class="btn btn-primary btn-md my-0 p" type="submit">Add to cart
               <i class="fa fa-shopping-cart ml-1"></i>
-            </button>
+            </button> -->
+            <a routerLink="/cart"class="btn btn-success pull-right" role="button">
+            Add to Shopping Cart <i class="fa fa-shopping-cart ml-1"></i>
+                       </a>
 
           </form>
 
@@ -68,10 +72,27 @@
       <!--Grid column-->
       <div class="col-md-6 text-center">
 
-        <h4 class="my-4 h4">Additional information</h4>
+        <h6 class="my-4 h4">Description:</h6>
+        <ul class="list-group">
+          <li class="list-group-item">Acetate frame</li>
+          <li class="list-group-item">100% UV protection (UV 400)</li>
+          <li class="list-group-item">Broad temples</li>
+          <li class="list-group-item">Eliminates glare</li>
+          <li class="list-group-item">Protects eyes from dust and wind</li>
+        </ul>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus suscipit modi sapiente illo soluta odit voluptates,
-          quibusdam officia. Neque quibusdam quas a quis porro? Molestias illo neque eum in laborum.</p>
+      </div>
+      <div class="col-md-6 text-center">
+
+        <h6 class="my-4 h4">Size and Fit:</h6>
+        <ul class="list-group">
+          <li class="list-group-item">Fits Face Size: Medium</li>
+          <li class="list-group-item">Bridge Size: 23 mm</li>
+          <li class="list-group-item">Temple Size: 153 mm</li>
+          <li class="list-group-item">Eye Size: 50 mm</li>
+          <li class="list-group-item">Frame Colour: Black</li>
+          
+        </ul>
 
       </div>
       <!--Grid column-->
@@ -85,7 +106,7 @@
       <!--Grid column-->
       <div class="col-lg-4 col-md-12 mb-4">
 
-        <img src="\assets\images\100\01.jpg" class="img-fluid" alt="">
+        <img [src]="getImage(product.image1)" class="img-fluid" alt="">
 
       </div>
       <!--Grid column-->
@@ -93,7 +114,7 @@
       <!--Grid column-->
       <div class="col-lg-4 col-md-6 mb-4">
 
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/12.jpg" class="img-fluid" alt="">
+        <img [src]="getImage(product.image2)" class="img-fluid" alt="">
 
       </div>
       <!--Grid column-->
@@ -101,7 +122,7 @@
       <!--Grid column-->
       <div class="col-lg-4 col-md-6 mb-4">
 
-        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/13.jpg" class="img-fluid" alt="">
+        <img [src]="getImage(product.image)" class="img-fluid" alt="">
 
       </div>
       <!--Grid column-->

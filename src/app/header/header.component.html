@@ -35,40 +35,40 @@
               </div>
           </ul>
           <ul class="nav navbar-nav navbar-right" style="position: absolute;right: 0;padding:25px;">
-              <li ><a class="nav-link" [routerLinkActive]="['active']" routerLink="./Dashboard" style="cursor:pointer">
+              <li *ngIf="authService.loggedIn()" ><a class="nav-link" [routerLinkActive]="['active']" routerLink="./Dashboard" style="cursor:pointer">
                 Dashboard
                 <i class="fa fa-user-plus" aria-hidden="true"></i></a>
               </li>
-               <li ><a class="nav-link" [routerLinkActive]="['active']" routerLink="./Profile" style="cursor:pointer">
+               <li *ngIf="authService.loggedIn()" ><a class="nav-link" [routerLinkActive]="['active']" routerLink="./Profile" style="cursor:pointer">
                     Profile
                     <i class="fa fa-user-plus" aria-hidden="true"></i></a>
                   </li>
               
-                  <li><a class="nav-link" [routerLinkActive]="['active']" routerLink="./Register" style="cursor:pointer">
+                  <li *ngIf="!authService.loggedIn()"><a class="nav-link" [routerLinkActive]="['active']" routerLink="./Register" style="cursor:pointer">
                     Signup 
                     <i class="fa fa-user-plus" aria-hidden="true"></i></a>
                   </li>
               
-              <li>
+              <li *ngIf="!authService.loggedIn()">
                 <a class="nav-link" [routerLinkActive]="['active']"  routerLink="./Signin" style="cursor:pointer"> 
                   Signin 
                   <i class="fa fa-sign-in" aria-hidden="true"></i>
                 </a>
                 </li>
-                <li >
+                <li *ngIf="authService.loggedIn()" >
                   <a class="nav-link" (click)="onLogoutClick()" href="#" style="cursor:pointer"> 
                     Logout 
                     <i class="fa fa-sign-out" aria-hidden="true"></i>
                   </a>
                   </li>
               
-              <li>
-                <a class="nav-link" style="cursor:pointer">
+              <li *ngIf="authService.loggedIn()">
+                <a  [routerLinkActive]="['active']" routerLink="./cart" class="nav-link" style="cursor:pointer">
                   Cart
                   <i class="fa fa-shopping-cart" aria-hidden="true">
                     </i>
                     <span class="badge badge-pill badge-danger" style="background-color:red;color:white">
-                      <!-- {{this.noOfProductsInCart}} -->
+                      {{this.noOfProductsInCart}}
                     </span>
                   </a>
                 </li>

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {catchError, map} from 'rxjs/operators';
+import { Http } from '../../../node_modules/@angular/http';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class GlassesService {
   // rootUrl: any = 'http://localhost:3000';
   // header: any;
 
-  constructor(private _http: HttpClient) { 
+  constructor(private http: Http) { 
     // this.header = new HttpHeaders({
     //   'Content-Type': 'application/json',
     // });
@@ -22,5 +23,14 @@ export class GlassesService {
   //     catchError((err: HttpErrorResponse)=> throwError(err))
   //   )
   // }
+  getProduct(id)
+  {
+  
+    return this.http.get("http://localhost:3000/products/Sunglass/"+id).pipe(map(res => res.json()));
+  }
+  getProducts()
+  {
+    return this.http.get("http://localhost:3000/products/allProduct").pipe(map(res=>res.json()));
+  }
 
 }

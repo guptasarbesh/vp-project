@@ -1,0 +1,55 @@
+<div class="container">
+  <h1 style="text-align: center;">MY CART</h1>
+
+    <table class="table table-responsive table-bordered table" >
+        <thead class="thead-default">
+           <tr>
+
+              <th>PRODUCT</th>
+              <th>PRICE</th>
+              <th>QUANTITY</th>
+              <th>TOTAL</th>
+              <th>Remove</th>
+           </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pro of addedProducts; let i = index">
+            <th>{{pro.name}}</th>
+            <th>{{pro.price}}</th>
+            <th>{{pro.quantity}}</th>
+            <th>{{pro.price * pro.quantity}}</th>
+            <th><button class = "btn btn-danger" (click)="onRemoveClicked(i)">X</button></th>
+          </tr>
+        </tbody>
+    </table>
+
+
+
+    <table class="table table-responsive table-bordered  tables" >
+        <thead class="thead-default">
+           <tr>
+              <th><h5>CART TOTAL</h5></th>
+              <th></th>
+           </tr>
+        </thead>
+        <tbody>
+          <tr>
+
+              <td>SUB TOTAL</td>
+              <td>X</td>
+          </tr>
+          <tr>
+
+              <td>DELIVERY CHARGE</td>
+              <td>Y</td>
+          </tr>
+          <tr>
+
+              <td>TOTAL</td>
+              <td>Z</td>
+          </tr>
+        </tbody>
+    </table>
+
+      <a href="#"> <button class="btn btn-primary">PROCEED TO CHECKOUT</button></a>
+  </div>

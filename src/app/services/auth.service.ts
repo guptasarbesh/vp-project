@@ -45,13 +45,12 @@ export class AuthService {
   {
     const token=localStorage.getItem('id_token');
     this.authToken=token;
-
   }
 
 
-  // loggedIn() {
-  //   return tokenNotExpired('id_token');
-  // }
+  loggedIn() {
+    return tokenNotExpired('id_token');
+  }
 
   storeUserData(token,user)
   {
@@ -67,4 +66,5 @@ export class AuthService {
     this.user=null;
     localStorage.clear();
   }
+  
 }

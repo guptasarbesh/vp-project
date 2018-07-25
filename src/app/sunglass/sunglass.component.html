@@ -36,7 +36,7 @@
       <div class="row wow fadeIn">
 
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-4" *ngFor="let item of glassList; let i = index;">
+        <div class="col-lg-3 col-md-6 mb-4" *ngFor="let item of product; let i = index;">
 
           <!--Card-->
           <div class="card">
@@ -53,12 +53,12 @@
             <!--Card content-->
             <div class="card-body text-center">
               <!--Category & Title-->
-              <a routerLink="Product" class="grey-text">
+              <a (click)="goToPro(item.id)" role="button" class="grey-text">
                 <h5>{{item.name}}</h5>
               </a>
               <h5>
                 <strong>
-                  <a routerLink="Product" class="dark-grey-text">Product Id:{{item.id}}
+                  <a  (click)="goToPro(item.id)" role="button"class="dark-grey-text">Product Id:{{item.id}}
                     <span class="badge badge-pill danger-color">NEW</span>
                   </a>
                 </strong>
