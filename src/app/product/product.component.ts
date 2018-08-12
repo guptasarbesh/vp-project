@@ -35,8 +35,10 @@ if (this.authService.loggedIn()) {
   this.authService.addInterseted(this.user._id, this.product._id).subscribe((data) => {
       if(data)
       {
+        console.log(data);
         this.authService.haveUser(this.user.email).subscribe((data) => {
           if (data) {
+            console.log(data);
             this.user.interestedIn = data.interestedIn;
             localStorage.setItem('user', JSON.stringify(this.user));
           }
