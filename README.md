@@ -29,3 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # coursera-angularnew
 >>>>>>> 3ccf460064587a9777c48f58cf51f2dd2a515cb0
+
+
+*** these is frontendpart only
+** use npm start
